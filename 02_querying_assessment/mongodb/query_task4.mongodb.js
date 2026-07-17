@@ -17,8 +17,9 @@
 // are involved, and what MongoDB concepts you plan to use.
 // Write in English or Thai. Do not skip this step.
 //
-// Your thinking:ก็เเค่ทำสิ่งที่โจทยบอก  hint มีมาให้เเล้ว
-//
+// Your thinking:ก็เเค่ทำสิ่งที่โจทยบอก  hint มีมาให้เเล้ว สาเหตที่ไม่ใช้ match เพราะต้องการให้เอาทั้งหมดที่อยู่ใน orderมาคิด
+// กำหนดให้ totelrevenue เก็บค่า ผลรวมของ total_rpice
+// เเบ่งกลุ่ม ให้ _id เก็บ กลุ่มชื่อ ' "$orders"'  ถ้าหากกำหนดให้ _id : "$_id" มันจ่าเเบ่งเป็นผลรวมเงินของ order เเต่ละคนเเทนที่จะเป็น order ทั้งหมด
 use("chrome-burger-dbz");
 
-db.orders.aggregate([ {$group: { _id : "$_id" ,total_revenue : {$sum : "$total_price"}}} ]);
+db.orders.aggregate([ {$group: { _id : ` "$orders"`  ,total_revenue : {$sum : "$total_price"}}} ]);
