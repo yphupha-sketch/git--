@@ -18,5 +18,9 @@
 --
 -- Your thinking: ทำที่ hint บอก
 --
-SELECT * from staff
+SELECT 
+first_name,
+last_name,
+role
+ from staff
 where role = 'Cook'

@@ -16,5 +16,10 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: ดูตัวอย่างจากsql
 --
+
+SELECT
+ name , price
+FROM MenuItems
+Where price < 10

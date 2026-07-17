@@ -17,5 +17,22 @@
 -- involved, and what SQL concepts you plan to use.
 -- Write in English or Thai. Do not skip this step.
 --
--- Your thinking:
+-- Your thinking: ทำที่ hint บอก
 --
+
+/*SELECT
+order_date,
+total_price
+FROM orders
+where  staff_id = 1
+*/
+
+ SELECT
+order_date,
+total_price,
+/*staff.first_name*/
+
+ from orders
+ JOIN staff ON orders.staff_id = staff.staff_id
+ 
+ WHERE staff.first_name = 'Jane' AND staff.last_name = 'Doe'
